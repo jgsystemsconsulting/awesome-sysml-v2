@@ -1,0 +1,48 @@
+name: Freshness report
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build freshness report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cutoff=$(date -u -d "12 months ago" +%Y-%m-%dT%H:%M:%SZ)
+          {
+            echo "Entries with no push in over 12 months (as of $(date -u +%Y-%m-%d)):"
+            echo
+          } > freshness-report.md
+          found=0
+          for url in $(grep -oE "https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+" README.md | sort -u); do
+            repo=$(printf '%s' "${url#https://github.com/}" | cut -d/ -f1-2)
+            pushed=$(curl -sf -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/repos/$repo" | jq -r ".pushed_at // empty")
+            [ -n "$pushed" ] || continue
+            if [[ "$pushed" < "$cutoff" ]]; then
+              echo "- [$repo]($url) - last push $pushed" >> freshness-report.md
+              found=1
+            fi
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "No entries exceeded the 12-month threshold." >> freshness-report.md
+          fi
+      - name: Create or update the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing=$(gh issue list --state open --search "Freshness report in:title" --json number --jq ".[0].number // empty")
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --body-file freshness-report.md
+          else
+            gh issue create --title "Freshness report" --body-file freshness-report.md
+          fi
