@@ -15,7 +15,6 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 - [Deployment and Containers](#deployment-and-containers)
 - [Commercial Tools](#commercial-tools)
 - [Migrating from SysML v1](#migrating-from-sysml-v1)
-- [Acknowledgements](#acknowledgements)
 
 ## Specifications and Standards
 
@@ -127,7 +126,3 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 ## Contributing
 
 See [contributing.md](contributing.md) for the inclusion criteria, entry format, and local lint commands.
-
-## Acknowledgements
-
-This list builds on earlier curation by [mycr0ft/awesome-sysml](https://github.com/mycr0ft/awesome-sysml) and [daltskin/SysML-v2-Resources](https://github.com/daltskin/SysML-v2-Resources).
