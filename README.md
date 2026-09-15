@@ -107,7 +107,7 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 ## Commercial Tools
 
 - [Ansys System Architecture Modeler](https://www.ansys.com/products/connect/ansys-system-architecture-modeler) - Ansys platform for systems architecture modeling that works with SysML v2.
-- [Dalus](http://dalus.io/) - AI-native MBSE platform built on SysML v2.
+- [Dalus](https://dalus.io) - MBSE platform built on SysML v2.
 - [Intercax Syndeia](https://intercax.com/products/syndeia) - Digital thread platform that connects SysML v2 models with engineering tools.
 - [LemonTree](https://www.lieberlieber.com/lemontree/en/) - Model comparison, diff, and merge tool for SysML v2 team workflows.
 - [Siemens Systems Modeler](https://blogs.sw.siemens.com/teamcenter/tools-system-modeler-sysml-v2/) - Web-based collaborative graphical modeling tool for SysML v2 integrated with Teamcenter.

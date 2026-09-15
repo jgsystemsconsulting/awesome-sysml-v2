@@ -18,7 +18,7 @@ One line per entry, exactly:
 - [Name](URL) - Description.
 ```
 
-The name is the project or product proper name. The URL is canonical: repo root for GitHub projects, product page for commercial tools, no tracking parameters, no trailing slash. The description is one factual sentence that starts uppercase and ends with a period; a short parenthetical is allowed after the first word, for example "(VS Code)". Entries are sorted alphabetically, case-insensitive, by link text within each section. Commercial products go in the Commercial Tools section only.
+The name is the project or product proper name. The URL is canonical: repo root for GitHub projects, product page for commercial tools, no tracking parameters, no trailing slash on GitHub repo roots. The description is one factual sentence that starts uppercase and ends with a period; a short parenthetical is allowed after the first word, for example "(VS Code)". Entries are sorted alphabetically, case-insensitive, by link text within each section. Commercial products go in the Commercial Tools section only.
 
 ## Local commands
 
