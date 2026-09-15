@@ -1,4 +1,4 @@
-# Awesome SysML v2 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome SysML V2 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of OMG SysML v2 tools, example models, and learning resources.
 
@@ -15,6 +15,7 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 - [Deployment and Containers](#deployment-and-containers)
 - [Commercial Tools](#commercial-tools)
 - [Migrating from SysML v1](#migrating-from-sysml-v1)
+- [Acknowledgements](#acknowledgements)
 
 ## Specifications and Standards
 
