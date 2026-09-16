@@ -1,4 +1,10 @@
 name: Links
+# Action refs are pinned to full-length commit SHAs (supply-chain hardening,
+# per GitHub's security-hardening guide). To bump an action, resolve its tag
+# to a commit SHA, e.g.:
+#   curl -s https://api.github.com/repos/<owner>/<repo>/commits/<tag>
+# Use the "sha" field (the commit, not a tag object SHA; see annotated-tag
+# note in the repo spec for P9), then update the version comment to match.
 
 on:
   schedule:
@@ -13,17 +19,17 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --no-progress
           fail: false
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
