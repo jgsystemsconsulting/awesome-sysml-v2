@@ -3,4 +3,5 @@
 - [ ] `- [Name](URL) - Description.` format followed
 - [ ] `npx awesome-lint@2.3.0 README.md` passes locally
 - [ ] `npx markdownlint-cli2 "README.md" "contributing.md"` passes locally
+- [ ] No new broken links: `lychee README.md` passes locally, or the Link check on this PR shows no new failures (advisory)
 - [ ] Commercial entries go in Commercial Tools only, with disclosure in the PR body

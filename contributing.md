@@ -28,3 +28,13 @@ Run these from the repository root before opening a PR:
 npx awesome-lint@2.3.0 README.md
 npx markdownlint-cli2 "README.md" "contributing.md"
 ```
+
+### Link check
+
+`lychee` is a native binary, not an npm package. Install it once with your platform package manager (`scoop`, `winget`, or `choco` on Windows, `brew` on macOS, `pacman`, `zypper`, `snap`, or `apk` on Linux), then run from the repository root:
+
+```bash
+lychee README.md
+```
+
+Export `GITHUB_TOKEN` (for example `GITHUB_TOKEN=$(gh auth token)`) to avoid GitHub rate limiting on `github.com` links. Third-party sites sometimes return transient timeouts or 429s; retry before treating a failure as a broken link.
