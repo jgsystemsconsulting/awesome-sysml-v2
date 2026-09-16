@@ -25,6 +25,6 @@ The name is the project or product proper name. The URL is canonical: repo root 
 Run these from the repository root before opening a PR:
 
 ```bash
-npx awesome-lint README.md
+npx awesome-lint@2.3.0 README.md
 npx markdownlint-cli2 "README.md" "contributing.md"
 ```

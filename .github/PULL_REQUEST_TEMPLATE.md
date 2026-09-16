@@ -1,5 +1,6 @@
 - [ ] Entry meets all five criteria in contributing.md
 - [ ] Added to the correct section; alphabetical order kept
 - [ ] `- [Name](URL) - Description.` format followed
-- [ ] `npx awesome-lint README.md` passes locally
+- [ ] `npx awesome-lint@2.3.0 README.md` passes locally
+- [ ] `npx markdownlint-cli2 "README.md" "contributing.md"` passes locally
 - [ ] Commercial entries go in Commercial Tools only, with disclosure in the PR body
