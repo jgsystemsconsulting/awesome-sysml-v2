@@ -41,11 +41,11 @@ Export `GITHUB_TOKEN` (for example `GITHUB_TOKEN=$(gh auth token)`) to avoid Git
 
 ## Maintenance
 
-Three automated workflows keep the list current. They live in `.github/workflows/` and need no manual upkeep; this section describes what each one does so contributors and maintainers can tell automation from neglect.
+Three workflows in `.github/workflows/` run on a fixed cadence. This section states what each does.
 
 ### Link scan (weekly)
 
-`links.yml` checks the links in every Markdown, HTML, and reStructuredText file in the repository every Monday at 18:00 UTC, on every pull request, and on manual dispatch. The check is advisory: a PR with broken links gets a warning but is never blocked by it. The "Link Checker Report" issue is created or updated only when links actually break; a week with no broken links leaves that issue untouched.
+`links.yml` runs lychee every Monday at 18:00 UTC, on every pull request, and on manual dispatch. The check is advisory: a PR with broken links gets a warning but is never blocked by it. The "Link Checker Report" issue is created or updated only when the check exits nonzero; a clean run leaves that issue untouched.
 
 ### Freshness report (monthly)
 
