@@ -125,4 +125,4 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 
 ## Contributing
 
-See [contributing.md](contributing.md) for the inclusion criteria, entry format, and local lint commands.
+See [contributing.md](contributing.md) for the inclusion criteria, entry format, local lint commands, and maintenance cadence.

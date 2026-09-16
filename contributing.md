@@ -38,3 +38,19 @@ lychee README.md
 ```
 
 Export `GITHUB_TOKEN` (for example `GITHUB_TOKEN=$(gh auth token)`) to avoid GitHub rate limiting on `github.com` links. Third-party sites sometimes return transient timeouts or 429s; retry before treating a failure as a broken link.
+
+## Maintenance
+
+Three automated workflows keep the list current. They live in `.github/workflows/` and need no manual upkeep; this section describes what each one does so contributors and maintainers can tell automation from neglect.
+
+### Link scan (weekly)
+
+`links.yml` checks the links in every Markdown, HTML, and reStructuredText file in the repository every Monday at 18:00 UTC, on every pull request, and on manual dispatch. The check is advisory: a PR with broken links gets a warning but is never blocked by it. The "Link Checker Report" issue is created or updated only when links actually break; a week with no broken links leaves that issue untouched.
+
+### Freshness report (monthly)
+
+`stale.yml` runs on the first day of each month at 06:00 UTC, or on manual dispatch. It collects the `github.com` repository URLs from README.md and lists repos with no push in the last 24 months. The report is advisory: an entry past the window can still be valid under the foundational-value exception (criterion 4). The "Freshness report" issue is refreshed on every run, including months with no stale entries. Criterion 4 speaks of a commit within 24 months; the report measures the repository's last push, which is usually but not always the same thing.
+
+### Lint gates (every PR and push to main)
+
+`lint.yml` runs `awesome-lint@2.3.0` on README.md, and `markdownlint` on README.md and contributing.md, on every pull request targeting main and every push to main. These gates block merge on failure. The local markdownlint command above installs an unpinned npx package and may differ from the version CI runs; the pinned `awesome-lint@2.3.0` matches CI exactly.
