@@ -1,6 +1,6 @@
 # Awesome SysML V2 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of OMG SysML v2 tools, example models, and learning resources.
+A curated list of OMG SysML v2 tools, models and case studies, and learning resources.
 
 ## Contents
 
@@ -10,7 +10,7 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 - [Modeling and Visualization](#modeling-and-visualization)
 - [Parsers, SDKs, and API Clients](#parsers-sdks-and-api-clients)
 - [Validation and Analysis](#validation-and-analysis)
-- [Example Models](#example-models)
+- [Models and Case Studies](#models-and-case-studies)
 - [Learning Resources](#learning-resources)
 - [Deployment and Containers](#deployment-and-containers)
 - [Commercial Tools](#commercial-tools)
@@ -73,13 +73,14 @@ A curated list of OMG SysML v2 tools, example models, and learning resources.
 - [Refinery Validation Pipeline](https://zenodo.org/records/19297800) - Archived validation pipeline for checking SysML v2 model patterns.
 - [simoneCavalleri/fsmc](https://github.com/simoneCavalleri/fsmc) - State-machine compiler with formal verification that accepts SysML v2 among its input formats.
 
-## Example Models
+## Models and Case Studies
 
 - [airbus/apollo-11-sysml-v2](https://github.com/airbus/apollo-11-sysml-v2) - Model of the Apollo 11 mission written in SysML v2.
 - [BruceDouglass/SysML-v2-MasterClass](https://github.com/BruceDouglass/SysML-v2-MasterClass) - Example models accompanying the SysML v2 Masterclass book.
 - [doug-rosenberg/structured-use-cases](https://github.com/doug-rosenberg/structured-use-cases) - Structured use-case library for SysML v2.
 - [GfSE/SysML-v2-Models](https://github.com/GfSE/SysML-v2-Models) - Curated collection of SysML v2 models from the German Gesellschaft für Systems Engineering.
 - [MBSE4U/dont-panic-batmobile](https://github.com/MBSE4U/dont-panic-batmobile) - Batmobile example model from the Don't Panic beginners' guide to SysML v2.
+- [MBSE4U/PLEML](https://github.com/MBSE4U/PLEML) - MBPLE (model-based product line engineering) example models in SysML v2.
 - [MBSE4U/sysmod-sysmlv2](https://github.com/MBSE4U/sysmod-sysmlv2) - SYSMOD language extension for SysML v2 with example models.
 - [MBSE4U/the-sysmlv2-book-examples](https://github.com/MBSE4U/the-sysmlv2-book-examples) - Example models from The SysML v2 Book.
 - [Open-MBEE/structured-use-cases](https://github.com/Open-MBEE/structured-use-cases) - Structured use-case library maintained by Open-MBEE.

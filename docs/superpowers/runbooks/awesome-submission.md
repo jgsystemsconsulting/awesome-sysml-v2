@@ -50,7 +50,7 @@ Source: https://raw.githubusercontent.com/sindresorhus/awesome/main/pull_request
 4. Edit `readme.md`, Contents section: add the `Awesome SysML V2` entry under the fitting section. No SysML or MBSE section existed in the upstream Contents as of 2026-09-16 (provisional), so the maintainer picks the closest fit from the live Contents at submission time.
 5. Title the PR exactly `Add SysML V2`. Upstream forbids the word Awesome in PR titles (pull_request_template.md bad example: `Add Awesome Swift`). The Contents entry name inside readme.md can still read `Awesome SysML V2`; only the PR title drops the word.
 6. Complete the PR template checklist: list "has been around for at least 30 days"; reviewed at least 4 PRs; comment `unicorn` on your own PR; awesome-lint run and all reported issues fixed; repo slug in the lowercase `awesome-name-of-list` form (`awesome-sysml-v2`); not a duplicate.
-7. For the not-duplicate item, include this differentiation sentence: "Unlike mycr0ft/awesome-sysml, which focuses on SysML v1, Awesome SysML V2 curates tools, example models, and learning resources for OMG SysML v2 specifically."
+7. For the not-duplicate item, include this differentiation sentence: "Unlike mycr0ft/awesome-sysml, which focuses on SysML v1, Awesome SysML V2 curates tools, models and case studies, and learning resources for OMG SysML v2 specifically."
 8. Hold the content bar: best-of curation only, no unmaintained, archived, or undocumented items, tight scope, and be ready to defend every entry in review.
 9. Do not submit until steps 1 through 8 hold. This runbook records readiness; it does not schedule the submission.
 
