@@ -2,6 +2,8 @@
 
 A curated list of OMG SysML v2 tools, models and case studies, and learning resources.
 
+> Part of the awesome-mbse list family (hub repository currently private).
+
 ## Contents
 
 - [Specifications and Standards](#specifications-and-standards)
