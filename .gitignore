@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.worktrees/
+.pytest_cache/
+.ruff_cache/
+*.bak
+.DS_Store
+node_modules/

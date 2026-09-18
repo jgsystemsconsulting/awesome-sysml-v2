@@ -4,7 +4,7 @@ title: Awesome SysML V2
 authors:
   - entity:
       name: "JG Systems Consulting Ltd"
-license: MIT
+license: CC0-1.0
 repository-code: https://github.com/jgsystemsconsulting/awesome-sysml-v2
 preferred-citation:
   type: generic

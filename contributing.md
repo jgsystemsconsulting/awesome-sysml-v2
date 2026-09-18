@@ -34,7 +34,7 @@ npx markdownlint-cli2 "README.md" "contributing.md"
 `lychee` is a native binary, not an npm package. Install it once with your platform package manager (`scoop`, `winget`, or `choco` on Windows, `brew` on macOS, `pacman`, `zypper`, `snap`, or `apk` on Linux), then run from the repository root:
 
 ```bash
-lychee README.md
+lychee README.md docs/index.html
 ```
 
 Export `GITHUB_TOKEN` (for example `GITHUB_TOKEN=$(gh auth token)`) to avoid GitHub rate limiting on `github.com` links. Third-party sites sometimes return transient timeouts or 429s; retry before treating a failure as a broken link.
@@ -45,7 +45,7 @@ Three workflows in `.github/workflows/` run on a fixed cadence. This section sta
 
 ### Link scan (weekly)
 
-`links.yml` runs lychee every Monday at 18:00 UTC, on every pull request, and on manual dispatch. The check is advisory: a PR with broken links gets a warning but is never blocked by it. The "Link Checker Report" issue is created or updated only when the check exits nonzero; a clean run leaves that issue untouched.
+`links.yml` runs lychee every Monday at 18:00 UTC, on every pull request, and on manual dispatch. It scans `README.md` and `docs/index.html` (the product surface). On pull requests, broken product-surface links fail the job and block merge. On the weekly schedule and manual dispatch, a nonzero run creates or updates the single open "Link Checker Report" issue; a clean run leaves that issue untouched.
 
 ### Freshness report (monthly)
 

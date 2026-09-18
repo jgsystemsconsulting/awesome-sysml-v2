@@ -1,0 +1,30 @@
+name: validate
+# Action refs are pinned to full-length commit SHAs (supply-chain hardening,
+# per GitHub's security-hardening guide). To bump an action, resolve its tag
+# to a commit SHA, e.g.:
+#   curl -s https://api.github.com/repos/<owner>/<repo>/commits/<tag>
+# Use the "sha" field (the commit, not a tag object SHA), then update the
+# version comment to match.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Run release gate
+        run: python scripts/check_release.py

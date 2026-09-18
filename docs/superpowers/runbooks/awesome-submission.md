@@ -1,5 +1,8 @@
 # Awesome Submission Runbook
 
+**Live assessment (2026-09-18):** docs/superpowers/specs/2026-09-18-awesome-acceptability-assessment.md (no-go/wait). Re-verify upstream before any PR.
+
+
 Scope: discoverability checklist and sindresorhus/awesome submission-readiness record for this repo, snapshotted 2026-09-16 against HEAD de549d9. Every row and gate in this file is a dated snapshot, not a live fact. Re-verify against the repo and upstream before acting on anything here.
 
 ## Section A: Repo discoverability state (checklist)

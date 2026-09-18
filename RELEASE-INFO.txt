@@ -1,0 +1,4 @@
+Product: Awesome SysML V2
+Version: 0.1.0
+Built: 2026-09-18T12:30:39Z
+Tag: v0.1.0
