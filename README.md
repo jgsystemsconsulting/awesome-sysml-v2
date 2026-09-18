@@ -1,5 +1,11 @@
 # Awesome SysML V2 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+<p align="right">
+  <a href="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
+    <img src="media/logo.svg" width="256" alt="list mark">
+  </a>
+</p>
+
 ![Last full sweep: 2026-09](https://img.shields.io/badge/last%20full%20sweep-2026--09-brightgreen)
 
 A curated list of OMG SysML v2 tools, models and case studies, and learning resources.

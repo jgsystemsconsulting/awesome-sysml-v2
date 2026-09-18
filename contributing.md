@@ -1,5 +1,8 @@
 # Contributing to Awesome SysML v2
 
+
+**Lint is mandatory.** awesome-lint on README.md must pass on every push/PR to main. See [docs/MATURITY.md](docs/MATURITY.md).
+
 Suggestions and pull requests are welcome. Every entry and every PR must meet the criteria below.
 
 ## Inclusion criteria
