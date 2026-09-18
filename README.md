@@ -11,7 +11,7 @@
 A curated list of OMG SysML v2 tools, models and case studies, and learning resources.
 For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse](https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse).
 
-> Part of the awesome-mbse list family (hub repository currently private).
+> Systems Modeling Language version 2 specifications, tools, and models.
 
 ## Contents
 
