@@ -4,6 +4,7 @@
 
 ![Last full sweep: 2026-09](https://img.shields.io/badge/last%20full%20sweep-2026--09-brightgreen)
 
+People and organizations behind these resources: [awesome-mbse-community](https://github.com/jgsystemsconsulting/awesome-mbse-community).
 
 > Systems Modeling Language version 2 specifications, tools, and models.
 
