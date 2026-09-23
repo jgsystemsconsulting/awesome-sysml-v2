@@ -6,6 +6,8 @@
 
 People and organizations behind these resources: [awesome-mbse-community](https://github.com/jgsystemsconsulting/awesome-mbse-community).
 
+Part of the [awesome-mbse list family](https://github.com/jgsystemsconsulting/awesome-mbse/blob/main/FAMILY.md).
+
 > Systems Modeling Language version 2 specifications, tools, and models.
 
 For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse](https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse).
@@ -171,3 +173,7 @@ git clone https://github.com/jgsystemsconsulting/awesome-sysml-v2.git
 
 Current release: **0.1.0** (2026-09-18). See [CHANGELOG.md](CHANGELOG.md) and
 [RELEASE-INFO.txt](RELEASE-INFO.txt).
+
+## Licence
+
+The curated list content is dedicated to the public domain under **CC0-1.0** (see [LICENSE](LICENSE) and [NOTICE](NOTICE)). Linked upstream resources remain under their own licences. No purchase or licence key is needed to use this list; for commercial questions, see [labs.jgsystemsconsulting.com/licensing.html](https://labs.jgsystemsconsulting.com/licensing.html).
