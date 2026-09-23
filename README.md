@@ -10,8 +10,6 @@ People and organizations behind these resources: [awesome-mbse-community](https:
 
 For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse](https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse).
 
-> Systems Modeling Language version 2 specifications, tools, and models.
-
 ## Contents
 
 - [Specifications and Standards](#specifications-and-standards)
@@ -25,6 +23,10 @@ For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse]
 - [Deployment and Containers](#deployment-and-containers)
 - [Commercial Tools](#commercial-tools)
 - [Migrating from SysML v1](#migrating-from-sysml-v1)
+- [Install](#install)
+- [Usage](#usage)
+- [Support](#support)
+- [Version](#version)
 
 ## Specifications and Standards
 
