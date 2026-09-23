@@ -175,4 +175,3 @@ The curated list content is dedicated to the public domain under **CC0-1.0** (se
 
 Current release: **0.1.0** (2026-09-18). See [CHANGELOG.md](CHANGELOG.md) and
 [RELEASE-INFO.txt](RELEASE-INFO.txt).
-
