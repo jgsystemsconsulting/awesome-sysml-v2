@@ -1,498 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Built from the jgs-site-template shell: edit site.config.json, run tools/build.py. -->
+<!-- SPDX-License-Identifier: MIT -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Awesome SysML V2</title>
-  <meta name="description" content="Curated SysML v2 resources for systems engineers and MBSE practitioners.">
-  <link rel="canonical" href="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
-  <meta property="og:title" content="Awesome SysML V2">
-  <meta property="og:description" content="Curated SysML v2 resources for systems engineers and MBSE practitioners.">
-  <meta property="og:url" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/social-card.png">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="640">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Awesome SysML V2">
-  <meta name="twitter:description" content="Curated SysML v2 resources for systems engineers and MBSE practitioners.">
-  <meta name="twitter:image" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/social-card.png">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23157adb'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='600' fill='%23ffffff' text-anchor='middle'%3ES2%3C/text%3E%3C/svg%3E">
-  <link rel="preload" href="fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/IBMPlexSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  <style>
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-Medium.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
-    }
-    @font-face {
-      font-family: "IBM Plex Mono";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Awesome SysML V2: systems modeling language v2 specifications, tools, and models</title>
+<meta name="description" content="Systems Modeling Language version 2 specifications, tools, and models.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314130f'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='600' fill='%23f6f4ee' text-anchor='middle'%3ES2%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css?v=20260925b">
 
-    :root {
-      --color-bg: oklch(0.985 0.006 255);
-      --color-surface-1: oklch(0.995 0.005 255);
-      --color-surface-2: oklch(0.998 0.004 255);
-      --color-surface-3: oklch(1.0 0 0);
-      --color-primary: oklch(0.19 0.015 260);
-      --color-accent: oklch(0.58 0.17 253);
-      --color-text: oklch(0.17 0.012 258);
-      --color-text-muted: oklch(0.50 0.012 258);
-      --color-border: oklch(0.915 0.008 255);
-      --color-focus-ring: var(--color-accent);
-      --color-success: oklch(0.45 0.10 150);
-      --color-danger: oklch(0.50 0.14 25);
-      --color-attention: oklch(0.55 0.12 85);
-
-      --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-
-      --text-meta: 0.8rem;
-      --text-body: 1rem;
-      --text-h3: 1.25rem;
-      --text-h2: 1.5625rem;
-      --text-h1: 1.9375rem;
-
-      --space-1: 4px;
-      --space-2: 8px;
-      --space-3: 16px;
-      --space-4: 32px;
-      --space-5: 56px;
-      --space-section: 80px;
-
-      --radius-sm: 3px;
-      --radius-md: 5px;
-      --radius-lg: 7px;
-
-      --shell-max: 1120px;
-      --prose-max: 70ch;
-
-      color-scheme: light;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-sans);
-      font-size: var(--text-body);
-      font-weight: 400;
-      line-height: 1.55;
-      color: var(--color-text);
-      background: var(--color-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--color-accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.15em;
-      transition: color 160ms ease-out;
-    }
-
-    a:hover {
-      color: var(--color-primary);
-    }
-
-    a:focus-visible,
-    .primary:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--color-focus-ring);
-      outline-offset: 2px;
-    }
-
-    .shell {
-      width: min(100% - 2 * var(--space-3), var(--shell-max));
-      margin-inline: auto;
-    }
-
-    .prose {
-      max-width: var(--prose-max);
-    }
-
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--color-bg);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .site-nav .shell {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--space-2) var(--space-3);
-      padding-block: var(--space-2);
-      min-height: 48px;
-    }
-
-    .site-nav a {
-      font-size: var(--text-meta);
-      font-weight: 500;
-      color: var(--color-text-muted);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      padding: var(--space-1) var(--space-1);
-    }
-
-    .site-nav a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    .site-nav .nav-full {
-      margin-inline-start: auto;
-      color: var(--color-accent);
-    }
-
-    section {
-      padding-block: var(--space-section);
-    }
-
-    section + section {
-      border-top: 1px solid var(--color-border);
-    }
-
-    h1, h2, h3 {
-      color: var(--color-primary);
-      line-height: 1.25;
-      margin: 0 0 var(--space-3);
-    }
-
-    h1 {
-      font-size: var(--text-h1);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: var(--text-h2);
-      font-weight: 600;
-      letter-spacing: -0.015em;
-    }
-
-    h3 {
-      font-size: var(--text-h3);
-      font-weight: 500;
-    }
-
-    p {
-      margin: 0 0 var(--space-3);
-      color: var(--color-text);
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .muted {
-      color: var(--color-text-muted);
-    }
-
-    #hero {
-      padding-block: var(--space-5) var(--space-section);
-    }
-
-    #hero .claim {
-      font-size: var(--text-body);
-      max-width: var(--prose-max);
-      margin-bottom: var(--space-3);
-    }
-
-    #hero .support {
-      color: var(--color-text-muted);
-      max-width: var(--prose-max);
-      margin-bottom: var(--space-4);
-    }
-
-    .primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 var(--space-4);
-      font-family: var(--font-sans);
-      font-size: var(--text-body);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--color-surface-3);
-      background: var(--color-accent);
-      border: 1px solid var(--color-accent);
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      box-shadow: 0 1px 2px color-mix(in oklch, var(--color-primary) 12%, transparent);
-      transition: background-color 160ms ease-out, border-color 160ms ease-out, color 160ms ease-out;
-    }
-
-    .primary:hover {
-      color: var(--color-surface-3);
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      text-decoration: none;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin: 0 0 var(--space-4);
-      padding: 0;
-      list-style: none;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: baseline;
-      gap: var(--space-2);
-      padding: var(--space-1) var(--space-2);
-      font-family: var(--font-mono);
-      font-size: var(--text-meta);
-      font-variant-numeric: tabular-nums;
-      color: var(--color-text-muted);
-      background: var(--color-surface-1);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-sm);
-    }
-
-    .chip dt {
-      font-weight: 400;
-      margin: 0;
-    }
-
-    .chip dd {
-      margin: 0;
-      color: var(--color-text);
-      font-weight: 400;
-    }
-
-    .family {
-      max-width: var(--prose-max);
-      color: var(--color-text-muted);
-      font-size: var(--text-body);
-    }
-
-    .section-index {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      border-top: 1px solid var(--color-border);
-    }
-
-    .section-index li {
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .section-index a {
-      display: block;
-      padding: var(--space-3) 0;
-      font-weight: 500;
-      color: var(--color-text);
-      text-decoration: none;
-    }
-
-    .section-index a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    @media (min-width: 1024px) {
-      .section-index {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: var(--space-4);
-      }
-
-      .section-index li:nth-child(odd) {
-        padding-inline-end: var(--space-3);
-      }
-
-      .section-index li:nth-child(even) {
-        padding-inline-start: var(--space-3);
-        border-inline-start: 1px solid var(--color-border);
-      }
-    }
-
-    .link-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      max-width: var(--prose-max);
-    }
-
-    .link-list li {
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .link-list li:first-child {
-      border-top: 1px solid var(--color-border);
-    }
-
-    .link-list a {
-      display: block;
-      padding: var(--space-3) 0;
-      font-weight: 500;
-      color: var(--color-text);
-      text-decoration: none;
-    }
-
-    .link-list a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    .site-footer {
-      border-top: 1px solid var(--color-border);
-      padding-block: var(--space-4);
-      font-size: var(--text-meta);
-      color: var(--color-text-muted);
-    }
-
-    .site-footer p {
-      margin: 0;
-      color: var(--color-text-muted);
-    }
-
-    .site-footer a {
-      font-weight: 500;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
-  </style>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
+<meta property="og:title" content="Awesome SysML V2">
+<meta property="og:description" content="Systems Modeling Language version 2 specifications, tools, and models.">
+<meta property="og:image" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/social-card.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Awesome SysML V2">
+<meta name="twitter:description" content="Systems Modeling Language version 2 specifications, tools, and models.">
+<meta name="twitter:image" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/social-card.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Awesome SysML V2","applicationCategory":"DeveloperApplication","operatingSystem":"Any","softwareVersion":"0.1.0","license":"https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE","url":"https://jgsystemsconsulting.github.io/awesome-sysml-v2/","codeRepository":"https://github.com/jgsystemsconsulting/awesome-sysml-v2","author":{"@type":"Organization","name":"JG Systems Consulting Ltd"}}
+</script>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Page">
-    <div class="shell">
-      <a href="#hero">Top</a>
-      <a href="#evidence">Status</a>
-      <a href="#sections">Sections</a>
-      <a href="#curation">Curation</a>
-      <a href="#contribute">Contribute</a>
-      <a class="nav-full" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md">Open full list</a>
-    </div>
-  </nav>
 
-  <main>
-    <section id="hero">
-      <div class="shell">
-        <h1>Awesome SysML V2</h1>
-        <p class="claim">Curated SysML v2 resources for systems engineers and MBSE practitioners.</p>
-        <p class="support">Open the full list on GitHub for searchable Contents, then jump to the section that matches your work.</p>
-        <a class="primary" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md">Open full list</a>
-      </div>
-    </section>
+<header class="masthead"><div class="wrap">
+  <span>CLASSIFICATION: <b>PUBLIC</b></span>
+  <span>LICENCE: <b>CC0-1.0</b></span>
+  <span>DOC-ID: <b>JGS-AWE-SYSMLV2</b></span>
+  <span>REV <b>0.1.0</b></span>
+</div></header>
 
-    <section id="evidence" aria-labelledby="evidence-heading">
-      <div class="shell">
-        <h2 id="evidence-heading">Status</h2>
-        <dl class="chips">
-          <div class="chip">
-            <dt>version</dt>
-            <dd>0.1.0</dd>
-          </div>
-          <div class="chip">
-            <dt>sweep</dt>
-            <dd>2026-09</dd>
-          </div>
-          <div class="chip">
-            <dt>entries</dt>
-            <dd>75</dd>
-          </div>
-        </dl>
-        <p class="family">Part of the awesome-mbse list family.</p>
-      </div>
-    </section>
+<nav class="site" aria-label="Site"><div class="wrap">
+  <a class="brand" href="index.html" aria-label="JG Systems Consulting home"><img src="images/jgs-emblem-dark.png" alt="" width="28" height="28"></a>
+      <a href="#specifications-and-standards">Specs</a>
+    <a href="#official-implementations">Official</a>
+    <a href="#editors-and-language-tooling">Editors</a>
+    <a href="#modeling-and-visualization">Modeling</a>
+    <a href="#parsers-sdks-and-api-clients">Parsers</a>
+    <a href="#validation-and-analysis">Validation</a>
+    <a href="#models-and-case-studies">Models</a>
+    <a href="#learning-resources">Learning</a>
+    <a href="#deployment-and-containers">Deploy</a>
+    <a href="#commercial-tools">Commercial</a>
+    <a href="#migrating-from-sysml-v1">Migration</a>
+    <a href="#support">Support</a>
+</nav>
 
-    <section id="sections" aria-labelledby="sections-heading">
-      <div class="shell">
-        <h2 id="sections-heading">Sections</h2>
-        <p class="muted prose">Eleven README anchors. Open a section on GitHub.</p>
-        <ul class="section-index">
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#specifications-and-standards">Specifications and Standards</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#official-implementations">Official Implementations</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#editors-and-language-tooling">Editors and Language Tooling</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#modeling-and-visualization">Modeling and Visualization</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#parsers-sdks-and-api-clients">Parsers, SDKs, and API Clients</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#validation-and-analysis">Validation and Analysis</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#models-and-case-studies">Models and Case Studies</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#learning-resources">Learning Resources</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#deployment-and-containers">Deployment and Containers</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#commercial-tools">Commercial Tools</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/README.md#migrating-from-sysml-v1">Migrating from SysML v1</a></li>
-        </ul>
-      </div>
-    </section>
+<main>
+<div class="hero"><div class="wrap">
+  <h1>Awesome SysML V2</h1>
+  <div class="hero-grid">
+  <div class="hero-copy">
+    <p>Systems Modeling Language version 2 specifications, tools, and models.</p>
+    <p class="sub">Open the full list on GitHub for searchable Contents, then jump to the section that matches your work.</p>
+    <div class="cta"><a class="btn btn-primary" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2#readme">Browse the list <span aria-hidden="true">&rarr;</span></a>
+    <a class="btn btn-ghost" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">Contribute <span aria-hidden="true">&rarr;</span></a></div>
+  </div>
+  <div class="hero-media">
+    <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2" aria-label="Awesome SysML V2 on GitHub">
+      <img src="social-card.png?v=2" alt="Awesome SysML V2 overview card" width="1280" height="640">
+    </a>
+  </div>
+  </div>
+</div></div>
 
-    <section id="curation" aria-labelledby="curation-heading">
-      <div class="shell">
-        <h2 id="curation-heading">Curation</h2>
-        <p class="prose">Public-domain (CC0) curated index of SysML v2 specifications, official implementations, editors and tooling, parsers and SDKs, validation, models and case studies, learning material, deployment artifacts, commercial tools, and v1 migration paths. Nothing to install. The list does not re-host upstream content; follow each link to the source.</p>
-      </div>
-    </section>
+<section id="about"><div class="wrap">
+  <div class="shead"><span class="label">&sect;01 &middot; About</span><h2>Curated SysML v2 resources</h2></div>
+  <p class="lead">Systems Modeling Language version 2 specifications, tools, and models, curated for systems engineers and MBSE practitioners. People and organizations behind these resources: <a href="https://github.com/jgsystemsconsulting/awesome-mbse-community">awesome-mbse-community</a>. Part of the <a href="https://github.com/jgsystemsconsulting/awesome-mbse/blob/main/FAMILY.md">awesome-mbse list family</a>. For the MagicGrid MBSE methodology, see the sister list <a href="https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse">awesome-magicgrid-mbse</a>.</p>
+<div class="meta-row"><span>version <b>0.1.0</b></span><span>sweep <b>2026-09</b></span><span>entries <b>75</b></span></div>
+</div></section>
 
-    <section id="contribute" aria-labelledby="contribute-heading">
-      <div class="shell">
-        <h2 id="contribute-heading">Contribute</h2>
-        <p class="muted prose">Suggest a resource or report a dead link. Pull requests and issues are welcome.</p>
-        <ul class="link-list">
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">How to contribute</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/issues/new">Open an issue</a></li>
-          <li><a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2">Repository</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+<section id="specifications-and-standards"><div class="wrap">
+  <div class="shead"><span class="label">&sect;02 &middot; Specifications and standards</span><h2>Specifications and standards</h2></div>
+  <ul class="entry-list">
+<li><a href="https://www.omg.org/spec/KerML">KerML 1.0 (OMG)</a> - Formal specification of the Kernel Modeling Language that underpins SysML v2.</li>
+<li><a href="https://www.omg.org/spec/SysML/2.0">SysML 2.0 (OMG)</a> - Formal OMG specification of the SysML 2.0 language and its transformation, including machine-readable libraries.</li>
+<li><a href="https://www.omg.org/sysml/sysmlv2/sysml-tool/">SysML v2 tools page (OMG)</a> - OMG directory of tools that have announced SysML v2 support.</li>
+<li><a href="https://github.com/voidaliot/sysml-v2-docs">sysml-v2-docs</a> - Community-oriented mirror and notes on the SysML 2.0 specification documents.</li>
+<li><a href="https://sysml.org/">SysML.org</a> - SysML Partners site with a SysML v2 hub covering FAQs, tools, and training.</li>
+<li><a href="https://www.omg.org/spec/SystemsModelingAPI">Systems Modeling API 1.0 (OMG)</a> - Formal specification of the Systems Modeling API and Services with REST and OpenAPI platform-specific models.</li>
+</ul>
+</div></section>
 
-  <footer class="site-footer">
-    <div class="shell">
-      <p>
-        Licence: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a>.
-        <a href="https://labs.jgsystemsconsulting.com/licensing.html">Licence enquiries</a>.
-        Maintained by JG Systems Consulting Ltd.
-      </p>
-    </div>
-  </footer>
+<section id="official-implementations"><div class="wrap">
+  <div class="shead"><span class="label">&sect;03 &middot; Official implementations</span><h2>Official implementations</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/Systems-Modeling/SysML-v2-API-Cookbook">SysML-v2-API-Cookbook</a> - Recipes for working with the Systems Modeling API.</li>
+<li><a href="https://github.com/Systems-Modeling/SysML-v2-API-Java-Client">SysML-v2-API-Java-Client</a> - Java client library for the Systems Modeling API.</li>
+<li><a href="https://github.com/Systems-Modeling/SysML-v2-API-Services">SysML-v2-API-Services</a> - Reference implementation of the Systems Modeling API services built on Spring.</li>
+<li><a href="https://github.com/Systems-Modeling/SysML-v2-Pilot-Implementation">SysML-v2-Pilot-Implementation</a> - Reference implementation of the textual notation and visualization based on Xtext and Eclipse.</li>
+<li><a href="https://github.com/Systems-Modeling/SysML-v2-Release">SysML-v2-Release</a> - Official incremental release of the specifications, standard libraries, sample models, and installers.</li>
+</ul>
+</div></section>
+
+<section id="editors-and-language-tooling"><div class="wrap">
+  <div class="shead"><span class="label">&sect;04 &middot; Editors and language tooling</span><h2>Editors and language tooling</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/daltskin/sysml-v2-grammar">daltskin/sysml-v2-grammar</a> - ANTLR4 grammar for SysML v2 generated from the OMG BNF.</li>
+<li><a href="https://github.com/daltskin/sysml-v2-lsp">daltskin/sysml-v2-lsp</a> - ANTLR4-based language server and MCP server for SysML v2.</li>
+<li><a href="https://github.com/daltskin/VSCode_SysML_Extension">daltskin/VSCode_SysML_Extension</a> - VS Code extension for editing SysML v2.</li>
+<li><a href="https://github.com/DeciSym/sysml-mode">DeciSym/sysml-mode</a> - Emacs major mode for editing SysML v2.</li>
+<li><a href="https://github.com/mycr0ft/pygments-sysml">mycr0ft/pygments-sysml</a> - Pygments lexer for syntax highlighting SysML.</li>
+<li><a href="https://github.com/mycr0ft/sysml-vim">mycr0ft/sysml-vim</a> - Vim syntax support for SysML.</li>
+<li><a href="https://github.com/nomograph-ai/tree-sitter-sysml">nomograph-ai/tree-sitter-sysml</a> - Tree-sitter grammar for SysML v2.</li>
+<li><a href="https://github.com/sensmetry/sysml-2ls">sensmetry/sysml-2ls</a> - Open language support library for SysML v2 used by the Syside editor.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=sensmetry.syside-editor">Syside Editor (VS Code)</a> - Free VS Code and Open VSX editor extension for SysML v2 from Sensmetry.</li>
+</ul>
+</div></section>
+
+<section id="modeling-and-visualization"><div class="wrap">
+  <div class="shead"><span class="label">&sect;05 &middot; Modeling and visualization</span><h2>Modeling and visualization</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/DeciSym/sysmlv2-gui">DeciSym/sysmlv2-gui</a> - Desktop GUI for the SysML v2 graphical notation.</li>
+<li><a href="https://github.com/demaconsulting/SysML2Workbench">demaconsulting/SysML2Workbench</a> - Desktop viewer and IDE for SysML v2 built on SysML2Tools.</li>
+<li><a href="https://github.com/eclipse-syson/syson">eclipse-syson/syson</a> - Open source web-based graphical modeling tool for SysML v2.</li>
+<li><a href="https://github.com/hightechlog/mbse-workbench">hightechlog/mbse-workbench</a> - MBSE workbench built on Eclipse SysON.</li>
+<li><a href="https://github.com/Open-MBEE/sysmlv2-web-modeler">Open-MBEE/sysmlv2-web-modeler</a> - Web-based modeler for SysML v2.</li>
+<li><a href="https://github.com/tukcps/SysMD">tukcps/SysMD</a> - Notebook-style tool for SysML v2 and KerML with an integrated solver.</li>
+</ul>
+</div></section>
+
+<section id="parsers-sdks-and-api-clients"><div class="wrap">
+  <div class="shead"><span class="label">&sect;06 &middot; Parsers, SDKs, and API clients</span><h2>Parsers, SDKs, and API clients</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/ansys/pysam-sysml2">ansys/pysam-sysml2</a> - Python API client and object model for SysML v2 aligned with Ansys SAM.</li>
+<li><a href="https://github.com/demaconsulting/SysML2Tools">demaconsulting/SysML2Tools</a> - Toolchain for .NET that parses, lints, and renders diagrams for SysML v2.</li>
+<li><a href="https://github.com/mycr0ft/sysmlpy">mycr0ft/sysmlpy</a> - Python parser for SysML v2 built on ANTLR.</li>
+<li><a href="https://github.com/Open-MBEE/sysmlv2-python-client">Open-MBEE/sysmlv2-python-client</a> - Community Python client for the SysML v2 API.</li>
+<li><a href="https://github.com/Open-MBEE/sysmod-sysmlv2-api">Open-MBEE/sysmod-sysmlv2-api</a> - SYSMOD extension for the SysML v2 API with MCP support.</li>
+<li><a href="https://github.com/sireum/hamr-sysml-parser">sireum/hamr-sysml-parser</a> - SysML v2 parser derived from the pilot ANTLR grammar for the HAMR toolchain.</li>
+<li><a href="https://github.com/STARIONGROUP/SysML2.NET">STARIONGROUP/SysML2.NET</a> - Implementation of OMG SysML 2 for .NET with an associated web viewer.</li>
+<li><a href="https://github.com/Westfall-io/sysml2py">Westfall-io/sysml2py</a> - Python parser for the SysML 2.0 textual notation.</li>
+<li><a href="https://github.com/zbigniewsobiecki/sysml2">zbigniewsobiecki/sysml2</a> - Command-line tool that parses, validates, queries, and modifies SysML v2 models.</li>
+</ul>
+</div></section>
+
+<section id="validation-and-analysis"><div class="wrap">
+  <div class="shead"><span class="label">&sect;07 &middot; Validation and analysis</span><h2>Validation and analysis</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/ajhcs/cameo-mcp-bridge">ajhcs/cameo-mcp-bridge</a> - MCP bridge for creating and querying models in CATIA Magic and Cameo.</li>
+<li><a href="https://github.com/DeciSym/sysmlv2-validator">DeciSym/sysmlv2-validator</a> - Syntax checker for SysML v2 textual models.</li>
+<li><a href="https://zenodo.org/records/19297800">Refinery Validation Pipeline</a> - Archived validation pipeline for checking SysML v2 model patterns.</li>
+<li><a href="https://github.com/simoneCavalleri/fsmc">simoneCavalleri/fsmc</a> - State-machine compiler with formal verification that accepts SysML v2 among its input formats.</li>
+</ul>
+</div></section>
+
+<section id="models-and-case-studies"><div class="wrap">
+  <div class="shead"><span class="label">&sect;08 &middot; Models and case studies</span><h2>Models and case studies</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/airbus/apollo-11-sysml-v2">airbus/apollo-11-sysml-v2</a> - Model of the Apollo 11 mission written in SysML v2.</li>
+<li><a href="https://github.com/BruceDouglass/SysML-v2-MasterClass">BruceDouglass/SysML-v2-MasterClass</a> - Example models accompanying the SysML v2 Masterclass book.</li>
+<li><a href="https://github.com/doug-rosenberg/structured-use-cases">doug-rosenberg/structured-use-cases</a> - Structured use-case library for SysML v2.</li>
+<li><a href="https://github.com/GfSE/SysML-v2-Models">GfSE/SysML-v2-Models</a> - Curated collection of SysML v2 models from the German Gesellschaft f&uuml;r Systems Engineering.</li>
+<li><a href="https://github.com/MBSE4U/dont-panic-batmobile">MBSE4U/dont-panic-batmobile</a> - Batmobile example model from the Don't Panic beginners' guide to SysML v2.</li>
+<li><a href="https://github.com/MBSE4U/PLEML">MBSE4U/PLEML</a> - MBPLE (model-based product line engineering) example models in SysML v2.</li>
+<li><a href="https://github.com/MBSE4U/sysmod-sysmlv2">MBSE4U/sysmod-sysmlv2</a> - SYSMOD language extension for SysML v2 with example models.</li>
+<li><a href="https://github.com/MBSE4U/the-sysmlv2-book-examples">MBSE4U/the-sysmlv2-book-examples</a> - Example models from The SysML v2 Book.</li>
+<li><a href="https://github.com/Open-MBEE/structured-use-cases">Open-MBEE/structured-use-cases</a> - Structured use-case library maintained by Open-MBEE.</li>
+<li><a href="https://github.com/sensmetry/advent-of-sysml-v2">sensmetry/advent-of-sysml-v2</a> - Advent-of-code style challenge models for learning SysML v2.</li>
+</ul>
+</div></section>
+
+<section id="learning-resources"><div class="wrap">
+  <div class="shead"><span class="label">&sect;09 &middot; Learning resources</span><h2>Learning resources</h2></div>
+  <ul class="entry-list">
+<li><a href="https://sensmetry.com/advent-of-sysml-v2/">Advent of SysML v2</a> - Annual series of SysML v2 learning challenges with model solutions.</li>
+<li><a href="https://mbse-podcast.rocks/">MBSE Podcast</a> - Podcast on model-based systems engineering with episodes covering SysML v2.</li>
+<li><a href="https://mbse4u.com/sysml-v2/">MBSE4U SysML v2 hub</a> - Collection of SysML v2 articles, FAQs, and learning material from MBSE4U.</li>
+<li><a href="https://www.omg.org/communities/systems-modeling-community.htm">OMG Systems Modeling Community</a> - OMG community page for systems modeling practitioners.</li>
+<li><a href="https://clubs.oose.com/courses/sysmlv2/">OOSE Learning Club SysML v2</a> - Microlearning course on SysML v2.</li>
+<li><a href="https://www.sodiuswillert.com/hubfs/Downloadables/SodiusWillertSysMLv2CheatSheet.pdf">SodiusWillert SysML v2 cheat sheet</a> - Downloadable PDF cheat sheet for SysML v2 syntax.</li>
+<li><a href="https://sensmetry.com/sysml-cheatsheet/">SysML v2 cheat sheet (Sensmetry)</a> - Web-based syntax cheat sheet for SysML v2.</li>
+<li><a href="https://mbse4u.com/books/the-sysml-v2-book-practical-insights-and-comprehensive-reference/">The SysML v2 Book</a> - Practical reference book on SysML v2 by Weilkiens and Molnar.</li>
+<li><a href="https://sysml.visual-paradigm.com/">Visual Paradigm SysML v2 tutorials</a> - Tutorials and kickstart guides for modeling in SysML v2.</li>
+</ul>
+</div></section>
+
+<section id="deployment-and-containers"><div class="wrap">
+  <div class="shead"><span class="label">&sect;10 &middot; Deployment and containers</span><h2>Deployment and containers</h2></div>
+  <ul class="entry-list">
+<li><a href="https://github.com/jaydeanmartin/sysmlv2">jaydeanmartin/sysmlv2</a> - Docker Compose deployment of the SysML v2 pilot implementation.</li>
+<li><a href="https://github.com/mycr0ft/sysmlv2-jupyter-container">mycr0ft/sysmlv2-jupyter-container</a> - Podman container running Jupyter with SysML v2 support.</li>
+<li><a href="https://github.com/mycr0ft/SysON_podman_compose">mycr0ft/SysON_podman_compose</a> - Podman Compose setup for running Eclipse SysON.</li>
+</ul>
+</div></section>
+
+<section id="commercial-tools"><div class="wrap">
+  <div class="shead"><span class="label">&sect;11 &middot; Commercial tools</span><h2>Commercial tools</h2></div>
+  <ul class="entry-list">
+<li><a href="https://www.ansys.com/products/connect/ansys-system-architecture-modeler">Ansys System Architecture Modeler</a> - Ansys platform for systems architecture modeling that works with SysML v2.</li>
+<li><a href="https://dalus.io">Dalus</a> - MBSE platform built on SysML v2.</li>
+<li><a href="https://intercax.com/products/syndeia">Intercax Syndeia</a> - Digital thread platform that connects SysML v2 models with engineering tools.</li>
+<li><a href="https://www.lieberlieber.com/lemontree/en/">LemonTree</a> - Model comparison, diff, and merge tool for SysML v2 team workflows.</li>
+<li><a href="https://blogs.sw.siemens.com/teamcenter/tools-system-modeler-sysml-v2/">Siemens Systems Modeler</a> - Web-based collaborative graphical modeling tool for SysML v2 integrated with Teamcenter.</li>
+<li><a href="https://www.sysgit.io/">SysGit</a> - Git-centric collaboration platform for textual and graphical SysML v2.</li>
+<li><a href="https://sensmetry.com/syside/">Syside (Sensmetry)</a> - SysML v2 tool suite with a free editor and paid diagram, table, and automation features.</li>
+<li><a href="https://www.tomsawyer.com/sysml-v2-viewer">Tom Sawyer SysML v2 Viewer</a> - Interactive viewer with automatic layout for SysML v2 models via the Systems Modeling API.</li>
+<li><a href="https://www.visual-paradigm.com/features/sysml-v2/">Visual Paradigm SysML v2 Studio</a> - Modeling studio for SysML v2 with public tutorials.</li>
+</ul>
+</div></section>
+
+<section id="migrating-from-sysml-v1"><div class="wrap">
+  <div class="shead"><span class="label">&sect;12 &middot; Migrating from SysML v1</span><h2>Migrating from SysML v1</h2></div>
+  <ul class="entry-list">
+<li><a href="https://ctme.caltech.edu/transitioning-models-to-sysml-v2-with-mbse.html">Caltech CTME transition course</a> - Training course on transitioning models from SysML v1 to SysML v2.</li>
+<li><a href="https://docs.nomagic.com/SYSML2P/2026x/catia-magic-cameo-sysml-v2-community-edition-286557495.html">Cameo SysML v2 Community Edition docs</a> - Vendor documentation for the SysML v2 Community Edition of CATIA Magic Cameo.</li>
+<li><a href="https://www.omgwiki.org/MBSE/doku.php?id=mbse:sysml_v2_transition:sysml_v2_starter_model">Flashlight starter model</a> - Transition teaching model with tutorial assets from the INCOSE wiki.</li>
+<li><a href="https://www.omg.org/spec/SysML/2.0/Transformation/PDF">SysML Transformation specification (OMG)</a> - Normative specification for transforming SysML v1 models into SysML v2.</li>
+<li><a href="https://www.omgwiki.org/MBSE/doku.php?id=mbse:sysml_v2_transition">SysML v2 Transition wiki</a> - INCOSE-maintained FAQ, conversion guidance, and tool matrix for moving from SysML v1 to v2.</li>
+</ul>
+</div></section>
+
+<section id="install-usage"><div class="wrap">
+  <div class="shead"><span class="label">&sect;13 &middot; Install, usage, and contributing</span><h2>Nothing to install</h2></div>
+  <p class="lead">Nothing to install. This list is a curated index: browse it here on GitHub, or clone it with <code>git clone https://github.com/jgsystemsconsulting/awesome-sysml-v2.git</code>.</p>
+  <p class="lead" style="margin-top:1rem">Open the Contents at the top of the README and jump to a section, or search the page with your browser's find function. Open any entry's link to reach the upstream resource; the list never re-hosts content.</p>
+  <p class="lead" style="margin-top:1rem">Contributions welcome: see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">contributing.md</a> for the inclusion bar, entry format, and tag vocabulary.</p>
+  <p class="lead" style="margin-top:1rem">The curated list content is dedicated to the public domain under <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a> (see LICENSE and NOTICE). Linked upstream resources remain under their own licences. Current release: 0.1.0 (2026-09-18). See <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/CHANGELOG.md">CHANGELOG.md</a> and <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/RELEASE-INFO.txt">RELEASE-INFO.txt</a>.</p>
+</div></section>
+
+<section id="support"><div class="wrap">
+  <div class="shead"><span class="label">&sect;14 &middot; Support</span><h2>Support</h2></div>
+  <p class="lead">Bug or dead link: open an issue on this repository. To suggest a resource (the list's improvement channel), open a pull request that follows contributing.md, or open an <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/issues">issue</a>.</p>
+  <p class="lead" style="margin-top:1rem">Security issues: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/security/advisories/new">private security advisory</a> (see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/SECURITY.md">SECURITY.md</a>). Licensing enquiries: <a href="https://labs.jgsystemsconsulting.com/licensing.html">licensing page</a>.</p>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+  <div class="tblock">
+    <div class="tcell"><span class="tl">Product</span><b>awesome-sysml-v2</b></div>
+    <div class="tcell"><span class="tl">Rev</span><b>0.1.0</b></div>
+    <div class="tcell"><span class="tl">Licence</span><b>CC0-1.0</b></div>
+    <div class="tcell"><span class="tl">Repository</span><b>jgsystemsconsulting/awesome-sysml-v2</b></div>
+    <div class="tcell"><span class="tl">Engine</span><b>jgs-site-template</b></div>
+    <div class="tcell"><span class="tl">Owner</span><b>JG Systems Consulting Ltd</b></div>
+  </div>
+  <p class="fnote">Licence: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a>. <a href="https://labs.jgsystemsconsulting.com/licensing.html">Licence enquiries</a>. Maintained by JG Systems Consulting Ltd.</p>
+</div></footer>
+
 </body>
 </html>
