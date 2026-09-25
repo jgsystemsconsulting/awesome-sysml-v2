@@ -6,12 +6,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<title>Awesome SysML V2: systems modeling language v2 specifications, tools, and models</title>
+<meta name="color-scheme" content="light">
+<title>Awesome SysML V2</title>
 <meta name="description" content="Systems Modeling Language version 2 specifications, tools, and models.">
 <link rel="canonical" href="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314130f'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='600' fill='%23f6f4ee' text-anchor='middle'%3ES2%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="site.css?v=20260925b">
+<link rel="stylesheet" href="site.css?v=20260925c">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jgsystemsconsulting.github.io/awesome-sysml-v2/">
@@ -39,17 +39,19 @@
 
 <nav class="site" aria-label="Site"><div class="wrap">
   <a class="brand" href="index.html" aria-label="JG Systems Consulting home"><img src="images/jgs-emblem-dark.png" alt="" width="28" height="28"></a>
-      <a href="#specifications-and-standards">Specs</a>
-    <a href="#official-implementations">Official</a>
+      <a href="#about">About</a>
+    <a href="#specifications-and-standards">Specs</a>
+    <a href="#official-implementations">Core</a>
     <a href="#editors-and-language-tooling">Editors</a>
-    <a href="#modeling-and-visualization">Modeling</a>
+    <a href="#modeling-and-visualization">Viz</a>
     <a href="#parsers-sdks-and-api-clients">Parsers</a>
-    <a href="#validation-and-analysis">Validation</a>
+    <a href="#validation-and-analysis">Checks</a>
     <a href="#models-and-case-studies">Models</a>
-    <a href="#learning-resources">Learning</a>
+    <a href="#learning-resources">Learn</a>
     <a href="#deployment-and-containers">Deploy</a>
-    <a href="#commercial-tools">Commercial</a>
-    <a href="#migrating-from-sysml-v1">Migration</a>
+    <a href="#commercial-tools">Vendors</a>
+    <a href="#migrating-from-sysml-v1">Migrate</a>
+    <a href="#install-usage">Install</a>
     <a href="#support">Support</a>
 </nav>
 
@@ -59,7 +61,7 @@
   <div class="hero-grid">
   <div class="hero-copy">
     <p>Systems Modeling Language version 2 specifications, tools, and models.</p>
-    <p class="sub">Open the full list on GitHub for searchable Contents, then jump to the section that matches your work.</p>
+    <p class="sub">Open the full list on GitHub for searchable contents, then jump to the section that matches your work.</p>
     <div class="cta"><a class="btn btn-primary" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2#readme">Browse the list <span aria-hidden="true">&rarr;</span></a>
     <a class="btn btn-ghost" href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">Contribute <span aria-hidden="true">&rarr;</span></a></div>
   </div>
@@ -74,7 +76,24 @@
 <section id="about"><div class="wrap">
   <div class="shead"><span class="label">&sect;01 &middot; About</span><h2>Curated SysML v2 resources</h2></div>
   <p class="lead">Systems Modeling Language version 2 specifications, tools, and models, curated for systems engineers and MBSE practitioners. People and organizations behind these resources: <a href="https://github.com/jgsystemsconsulting/awesome-mbse-community">awesome-mbse-community</a>. Part of the <a href="https://github.com/jgsystemsconsulting/awesome-mbse/blob/main/FAMILY.md">awesome-mbse list family</a>. For the MagicGrid MBSE methodology, see the sister list <a href="https://github.com/jgsystemsconsulting/awesome-magicgrid-mbse">awesome-magicgrid-mbse</a>.</p>
-<div class="meta-row"><span>version <b>0.1.0</b></span><span>sweep <b>2026-09</b></span><span>entries <b>75</b></span></div>
+  <dl class="chips">
+    <div class="chip"><dt>version</dt><dd>0.1.0</dd></div>
+    <div class="chip"><dt>sweep</dt><dd>2026-09</dd></div>
+    <div class="chip"><dt>entries</dt><dd>75</dd></div>
+  </dl>
+        <ul class="section-index">
+          <li><a href="#specifications-and-standards">Specifications and Standards</a></li>
+          <li><a href="#official-implementations">Official Implementations</a></li>
+          <li><a href="#editors-and-language-tooling">Editors and Language Tooling</a></li>
+          <li><a href="#modeling-and-visualization">Modeling and Visualization</a></li>
+          <li><a href="#parsers-sdks-and-api-clients">Parsers, SDKs, and API Clients</a></li>
+          <li><a href="#validation-and-analysis">Validation and Analysis</a></li>
+          <li><a href="#models-and-case-studies">Models and Case Studies</a></li>
+          <li><a href="#learning-resources">Learning Resources</a></li>
+          <li><a href="#deployment-and-containers">Deployment and Containers</a></li>
+          <li><a href="#commercial-tools">Commercial Tools</a></li>
+          <li><a href="#migrating-from-sysml-v1">Migrating from SysML v1</a></li>
+        </ul>
 </div></section>
 
 <section id="specifications-and-standards"><div class="wrap">
@@ -219,30 +238,30 @@
 </div></section>
 
 <section id="install-usage"><div class="wrap">
-  <div class="shead"><span class="label">&sect;13 &middot; Install, usage, and contributing</span><h2>Nothing to install</h2></div>
+  <div class="shead"><span class="label">&sect;13 &middot; Install and usage</span><h2>Install and usage</h2></div>
   <p class="lead">Nothing to install. This list is a curated index: browse it here on GitHub, or clone it with <code>git clone https://github.com/jgsystemsconsulting/awesome-sysml-v2.git</code>.</p>
-  <p class="lead" style="margin-top:1rem">Open the Contents at the top of the README and jump to a section, or search the page with your browser's find function. Open any entry's link to reach the upstream resource; the list never re-hosts content.</p>
-  <p class="lead" style="margin-top:1rem">Contributions welcome: see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">contributing.md</a> for the inclusion bar, entry format, and tag vocabulary.</p>
-  <p class="lead" style="margin-top:1rem">The curated list content is dedicated to the public domain under <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a> (see LICENSE and NOTICE). Linked upstream resources remain under their own licences. Current release: 0.1.0 (2026-09-18). See <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/CHANGELOG.md">CHANGELOG.md</a> and <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/RELEASE-INFO.txt">RELEASE-INFO.txt</a>.</p>
+  <p class="lead">Open the Contents at the top of the README and jump to a section, or search the page with your browser's find function. Open any entry's link to reach the upstream resource; the list never re-hosts content.</p>
+  <p class="lead">Contributions welcome: see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/contributing.md">contributing.md</a> for the inclusion bar, entry format, and tag vocabulary.</p>
+  <p class="lead">The curated list content is dedicated to the public domain under <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a> (see LICENSE and NOTICE). Linked upstream resources remain under their own licences. Current release: 0.1.0 (2026-09-18). See <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/CHANGELOG.md">CHANGELOG.md</a> and <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/RELEASE-INFO.txt">RELEASE-INFO.txt</a>.</p>
 </div></section>
 
 <section id="support"><div class="wrap">
   <div class="shead"><span class="label">&sect;14 &middot; Support</span><h2>Support</h2></div>
   <p class="lead">Bug or dead link: open an issue on this repository. To suggest a resource (the list's improvement channel), open a pull request that follows contributing.md, or open an <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/issues">issue</a>.</p>
-  <p class="lead" style="margin-top:1rem">Security issues: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/security/advisories/new">private security advisory</a> (see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/SECURITY.md">SECURITY.md</a>). Licensing enquiries: <a href="https://labs.jgsystemsconsulting.com/licensing.html">licensing page</a>.</p>
+  <p class="lead">Security issues: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/security/advisories/new">private security advisory</a> (see <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/SECURITY.md">SECURITY.md</a>). Licensing enquiries: <a href="https://labs.jgsystemsconsulting.com/licensing.html">licensing page</a>.</p>
 </div></section>
 
 </main>
 <footer><div class="wrap">
   <div class="tblock">
-    <div class="tcell"><span class="tl">Product</span><b>awesome-sysml-v2</b></div>
-    <div class="tcell"><span class="tl">Rev</span><b>0.1.0</b></div>
-    <div class="tcell"><span class="tl">Licence</span><b>CC0-1.0</b></div>
-    <div class="tcell"><span class="tl">Repository</span><b>jgsystemsconsulting/awesome-sysml-v2</b></div>
-    <div class="tcell"><span class="tl">Engine</span><b>jgs-site-template</b></div>
-    <div class="tcell"><span class="tl">Owner</span><b>JG Systems Consulting Ltd</b></div>
+    <div><span class="label">Product</span><b>Awesome SysML V2</b></div>
+    <div><span class="label">Rev</span><b>0.1.0</b></div>
+    <div><span class="label">Licence</span><b>CC0-1.0</b></div>
+    <div><span class="label">Repository</span><b>jgsystemsconsulting/awesome-sysml-v2</b></div>
+    <div><span class="label">Engine</span><b>jgs-site-template</b></div>
+    <div><span class="label">Owner</span><b>JG Systems Consulting Ltd</b></div>
   </div>
-  <p class="fnote">Licence: <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a>. <a href="https://labs.jgsystemsconsulting.com/licensing.html">Licence enquiries</a>. Maintained by JG Systems Consulting Ltd.</p>
+  <p class="foot-note">Licence <a href="https://github.com/jgsystemsconsulting/awesome-sysml-v2/blob/main/LICENSE">CC0-1.0</a>. Licensing enquiries: <a href="https://labs.jgsystemsconsulting.com/licensing.html">licensing page</a>. Maintained by JG Systems Consulting Ltd.</p>
 </div></footer>
 
 </body>

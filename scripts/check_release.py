@@ -11,8 +11,8 @@ fails: list[str] = []
 REQUIRED = [
     "LICENSE", "COPYRIGHT", "NOTICE", "README.md", "CHANGELOG.md",
     "RELEASE-INFO.txt", "CITATION.cff", "SECURITY.md", ".gitignore",
-    "contributing.md", "CODE_OF_CONDUCT.md", "docs/DISTRIBUTION.md",
-    "docs/index.html", "docs/MATURITY.md", "scripts/check_release.py",
+    "contributing.md", "CODE_OF_CONDUCT.md", "internal/DISTRIBUTION.md",
+    "docs/index.html", "internal/MATURITY.md", "scripts/check_release.py",
 ]
 for f in REQUIRED:
     if not pathlib.Path(f).is_file():
