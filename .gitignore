@@ -17,3 +17,5 @@ sa-audit-*.json
 
 # Internal workflow artifacts stay local (RR-B-35, release-repo-standard)
 internal/superpowers/
+
+docs/superpowers/
