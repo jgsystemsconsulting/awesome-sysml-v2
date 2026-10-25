@@ -124,6 +124,7 @@ For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse]
 - [Dalus](https://dalus.io) - MBSE platform built on SysML v2.
 - [Intercax Syndeia](https://intercax.com/products/syndeia) - Digital thread platform that connects SysML v2 models with engineering tools.
 - [LemonTree](https://www.lieberlieber.com/lemontree/en/) - Model comparison, diff, and merge tool for SysML v2 team workflows.
+- [MBEstudio](https://vectorstreamsystems.com) - Browser-based SysML v2 textual modeling tool with AI model generation, requirement evaluation, simulation, and an MCP server.
 - [Siemens Systems Modeler](https://blogs.sw.siemens.com/teamcenter/tools-system-modeler-sysml-v2/) - Web-based collaborative graphical modeling tool for SysML v2 integrated with Teamcenter.
 - [SysGit](https://www.sysgit.io/) - Git-centric collaboration platform for textual and graphical SysML v2.
 - [Syside (Sensmetry)](https://sensmetry.com/syside/) - SysML v2 tool suite with a free editor and paid diagram, table, and automation features.
