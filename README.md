@@ -65,6 +65,7 @@ For the MagicGrid MBSE methodology, see the sister list [awesome-magicgrid-mbse]
 - [demaconsulting/SysML2Workbench](https://github.com/demaconsulting/SysML2Workbench) - Desktop viewer and IDE for SysML v2 built on SysML2Tools.
 - [eclipse-syson/syson](https://github.com/eclipse-syson/syson) - Open source web-based graphical modeling tool for SysML v2.
 - [hightechlog/mbse-workbench](https://github.com/hightechlog/mbse-workbench) - MBSE workbench built on Eclipse SysON.
+- [ola-coding/ortho](https://github.com/ola-coding/ortho) - Command-line tool and VS Code extension that renders six architectural views of a SysML v2 textual model as SVG in the standard graphical notation.
 - [Open-MBEE/sysmlv2-web-modeler](https://github.com/Open-MBEE/sysmlv2-web-modeler) - Web-based modeler for SysML v2.
 - [tukcps/SysMD](https://github.com/tukcps/SysMD) - Notebook-style tool for SysML v2 and KerML with an integrated solver.
 
